@@ -12,8 +12,6 @@ db = SQLAlchemy(app) #conecta
 
 #CRUD
 #Criar 
-#insert - SQL
-#http/web - POST
 @app.route("/funcionarios", methods=["POST"])
 def criar():
     #dados que vieram
@@ -114,9 +112,6 @@ def atualizar(id):
 
 
 #deletar/Destruir
-#delete
-#deletar/Destruir
-#delete
 @app.route("/marca/<id>", methods=['DELETE'])
 def delete(id):
     sql = text("DELETE FROM marca WHERE id = :id")
